@@ -24,11 +24,15 @@ var resourcesDirectory = Path.Combine(builder.Environment.ContentRootPath, "reso
 
 var app = builder.Build();
 
-app.MapGet("/", async () =>
+app.MapGet("/", async (HttpResponse httpResponse) =>
 {
+    httpResponse.Headers[EasterEggs.HintHeader] = EasterEggs.HintMessage;
+
     var defaultLanguage = (Environment.GetEnvironmentVariable("TRANSLATION_DEFAULT_LANGUAGE") ?? "EN").ToUpperInvariant();
     var translationFile = Environment.GetEnvironmentVariable("TRANSLATION_FILE") ?? "translations.json";
     var translationFilePath = Path.Combine(resourcesDirectory, translationFile);
+
+    var secret = EasterEggs.AlternateGreeting(defaultLanguage);
 
     try
     {
@@ -47,7 +51,14 @@ app.MapGet("/", async () =>
         }
 
         var timestamp = DateTime.UtcNow.ToString("o");
-        return Results.Text($"{translation} @ {timestamp}", PlainTextContentType);
+        var body = $"{secret ?? translation} @ {timestamp}";
+
+        if (secret is not null)
+        {
+            body += EasterEggs.Claim();
+        }
+
+        return Results.Text(body, PlainTextContentType);
     }
     catch (FileNotFoundException)
     {
@@ -66,6 +77,8 @@ app.MapGet("/", async () =>
         return ErrorResponse($"Error reading {translationFile}: {ex.Message}");
     }
 });
+
+app.MapGet("/eggs", () => Results.Text(EasterEggs.Riddle(), PlainTextContentType));
 
 app.Run();
 

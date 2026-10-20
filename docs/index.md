@@ -36,6 +36,7 @@ dotnet run
 
 4. HTTP endpoint
 - `GET /` – Responds with a greeting string such as `hello world @ 2024-06-01T12:34:56.000Z`.
+- `GET /eggs` – 🥚 See below.
 
 5. Configuration
 Environment variables provide the same configurability as the Quarkus and Node.js versions:
@@ -44,4 +45,24 @@ Environment variables provide the same configurability as the Quarkus and Node.j
 - `PORT` (default: `8080`) – Port for the HTTP server.
 
 All translations are stored in `resources/translations.json`, copied verbatim from the Quarkus project.
+
+---
+
+## 🥚 **Easter Egg!**
+
+One egg is hidden in this service. Start the service, then ask it for the riddle at `/eggs`.
+
+From a terminal in your workspace:
+
+```bash
+curl http://localhost:8080/eggs
+```
+
+In **OpenShift Dev Spaces**, open the `hello-by-lang` endpoint from the Endpoints view and add `/eggs` to the end of the URL.
+
+- [ ] 🥚 Find the easter egg – *"The translation file holds 85 greetings, but the service knows a few it never wrote down. Pirates can read them."*
+
+You will know you found it when the service hands you a trophy. 🏆
+
+**House rules:** reading `EasterEggs.cs` is cheating (and it is encoded anyway). The response headers, however, are fair game. 🐣
 
