@@ -19,20 +19,21 @@ internal static class EasterEggs
     private static readonly Dictionary<string, string> Vault = new()
     {
         ["hint"] =
-            "MSBlZ2cgaGlkZGVuIGluIHRoaXMgc2VydmljZS4gU3RhcnQgd2l0aDogR0VUIC9lZ2dz",
+            "NCBlZ2dzIGhpZGRlbiBpbiB0aGlzIHNlcnZpY2UuIFN0YXJ0IHdpdGg6IEdFVCAvZWdn" +
+            "cw==",
         ["greet"] =
             "eyJQSVJBVEUiOiAiYWhveSB3b3JsZCwgeWUgc2N1cnZ5IGRldiEiLCAiTEVFVCI6ICJo" +
             "M2xsMCB3MHJsZCIsICJFTU9KSSI6ICLwn5GLIPCfjI0iLCAiQklOQVJZIjogIjAxMTAx" +
             "MDAwIDAxMTAxMDAxIn0=",
         ["riddle"] =
             "8J+lmiBFYXN0ZXIgRWdnIEh1bnQgLSAuTkVUIFRyYW5zbGF0aW9uIFNlcnZpY2UKPT09" +
-            "PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQoKT25lIGVn" +
-            "ZyBpcyBoaWRkZW4gaW4gdGhpcyBzZXJ2aWNlLgoKICAiVGhlIHRyYW5zbGF0aW9uIGZp" +
-            "bGUgaG9sZHMgODUgZ3JlZXRpbmdzLCBidXQgdGhlIHNlcnZpY2Uga25vd3MKICAgYSBm" +
-            "ZXcgaXQgbmV2ZXIgd3JvdGUgZG93bi4gUGlyYXRlcyBjYW4gcmVhZCB0aGVtLiIKCkhp" +
-            "bnQ6IG9uZSBlbnZpcm9ubWVudCB2YXJpYWJsZSBhbHJlYWR5IGRlY2lkZXMgd2hpY2gg" +
-            "Z3JlZXRpbmcgeW91CmdldCBiYWNrLCBhbmQgcmVzb3VyY2VzLyBpcyBub3QgdGhlIG9u" +
-            "bHkgcGxhY2UgYSBncmVldGluZyBjYW4gbGl2ZS4KCkdvb2QgbHVjay4g8J+Qowo=",
+            "PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQoKRm91ciBl" +
+            "Z2dzIGFyZSBoaWRkZW4gaW4gdGhpcyBzZXJ2aWNlLgoKICAiVGhlIHRyYW5zbGF0aW9u" +
+            "IGZpbGUgaG9sZHMgODUgZ3JlZXRpbmdzLCBidXQgdGhlIHNlcnZpY2Uga25vd3MKICAg" +
+            "YSBmZXcgaXQgbmV2ZXIgd3JvdGUgZG93bi4gUGlyYXRlcyBjYW4gcmVhZCB0aGVtLiIK" +
+            "CkhpbnQ6IG9uZSBlbnZpcm9ubWVudCB2YXJpYWJsZSBhbHJlYWR5IGRlY2lkZXMgd2hp" +
+            "Y2ggZ3JlZXRpbmcgeW91CmdldCBiYWNrLCBhbmQgcmVzb3VyY2VzLyBpcyBub3QgdGhl" +
+            "IG9ubHkgcGxhY2UgYSBncmVldGluZyBjYW4gbGl2ZS4KCkdvb2QgbHVjay4g8J+Qowo=",
         ["found"] =
             "CgogICAgICAgICBfX19fX19fX19fXwogICAgICAgICcuXz09Xz09Xz1fLicKICAgICAg" +
             "ICAuLVw6ICAgICAgLy0uCiAgICAgICB8ICh8Oi4gICAgIHwpIHwKICAgICAgICAnLXw6" +
@@ -40,8 +41,9 @@ internal static class EasterEggs
             "ICAgICAgICAgICApICgKICAgICAgICAgICBfLicgJy5fCiAgICAgICAgICBgIiIiIiIi" +
             "ImAKCvCfj4YgRUdHIEZPVU5EISDwn4+GCgpZb3UgdGF1Z2h0IHRoaXMgc2VydmljZSB0" +
             "byBzcGVhayBhIGxhbmd1YWdlIHRoYXQgd2FzIG5ldmVyIGluCnJlc291cmNlcy90cmFu" +
-            "c2xhdGlvbnMuanNvbi4gR28gdGVsbCB0aGUgd29ya3Nob3AgZmFjaWxpdGF0b3IuIPCf" +
-            "kKM=",
+            "c2xhdGlvbnMuanNvbi4gVGhhdCBpcyBvbmUgb2YgZm91ciAtLSB0aHJlZSBtb3JlCmdy" +
+            "ZWV0aW5ncyBhcmUgc3RpbGwgaGlkZGVuLiBHbyB0ZWxsIHRoZSB3b3Jrc2hvcCBmYWNp" +
+            "bGl0YXRvci4g8J+Qow==",
     };
 
     private static readonly Dictionary<string, string> Unwrapped = new();
